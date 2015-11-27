@@ -4,6 +4,7 @@
   font-family: Lato,Microsoft YaHei,Helvetica,Arial,sans-serif;
   font-size: 18px;
   line-height: 1.72222;
+  padding-top: 53px;
 }
 /*public css*/
   .navbar-static-top {
@@ -324,6 +325,36 @@
 }
 .ourteam h2{
   font-size: 32px;
+}
+
+.footer{
+  background:#34495e;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.footer_link ul {
+  margin:0px;
+  padding:0px;
+}
+.footer_link li{
+  float:left;
+  margin-right: 10px;
+  list-style: none;
+  color:#1abc9c;
+  font-size: 16px;
+}
+.footer_link li a{
+  color:#1abc9c;
+}
+.footer_link li a:hover{
+  color:#16a085;
+}
+.footer_link p{
+  padding:0px;
+  margin:0px;
+  font-size: 14px;
+  color:#1abc9c;
+  display:block;
 }
 /* Custom, iPhone Retina*/
   @media only screen and (max-width : 320px) {
