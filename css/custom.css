@@ -220,7 +220,12 @@
 .row-system{
   border:1px solid #dddddd;
   border-left: none;
-   border-top: none;
+  border-top: none;
+  margin:0 5px 20px;
+
+}
+.index-title{
+  padding:0 3px;
 }
 .col-system{
   border:1px solid #dddddd;
@@ -294,7 +299,7 @@
 
 
 .system-span{
-  font-size: 16px;
+  font-size: 14px;
   color:#555555;
   display:block;
   margin-top: 5px;
@@ -304,7 +309,7 @@
   font-size: 16px;
   color:#1abc9c;
   display:block;
-  margin-top: 5px;
+  /*margin-top: 5px;*/
 }
 
 .system-bg{
