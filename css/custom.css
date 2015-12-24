@@ -14,6 +14,9 @@
   height:53px;
   display: block;
 }
+.navbar-right a{
+  cursor:pointer;
+}
 .navbar-right li a {
   font-size: 14px;
 }
@@ -428,6 +431,13 @@ padding-left: 20px;
 .visiter .feeds-item-author,.visiter .tm,.visiter .count{
   margin-left: 10px;
 }
+
+.modal-open{
+    overflow: inherit ;
+}
+
+
+
 /* Custom, iPhone Retina*/
   @media only screen and (max-width : 320px) {
   .carousel-control {
