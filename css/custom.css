@@ -485,6 +485,20 @@ padding-left: 20px;
   margin-top:10px;
   display:none;
 }
+.custom-breadcrumb{
+  margin-top:10px;
+}
+.custom-breadcrumb a{
+  color:#777;
+}
+
+.custom-breadcrumb .active{
+  color:#4f4f4f;
+}
+
+.course-list{
+  margin-bottom:10px;
+}
 
 
 @media (max-width:320px) {
