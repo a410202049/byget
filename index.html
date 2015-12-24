@@ -935,13 +935,10 @@
    </div> 
   </div> -->
 
-
-
   <!-- 注册模态框 -->
   <div class="modal fade" id="modal-reg" role="dialog" aria-labelledby="reg" aria-hidden="true">
     <div class="modal-dialog dialog-with">
       <div class="modal-content">
-
         <div class="tabbable">
           <ul class="nav nav-tabs modal-header modal-nav-tabs">
             <li class="active">
@@ -972,6 +969,8 @@
                     </div>
                   </div>
                   <button type="button" class="btn btn-primary btn-block">注册</button>
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
               </div>
               </div>
             </div>
@@ -980,58 +979,35 @@
               <div class="form-horizontal">
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="请输入电子邮箱地址">
+                      <input type="text" class="form-control"  placeholder="请输入手机号">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-7">
+                      <input type="password" class="form-control" placeholder="手机验证码">
+                    </div>
+                    <div class="col-lg-5">
+                      <button type="button" class="btn btn-primary btn-block">获取验证码</button>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
+                      <input type="text" class="form-control"  placeholder="6-16位密码，区分大小写，不能用空格">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
-                    </div>
-                  </div>
-
                   <div class="form-group">
                     <div class="col-lg-12">
                       <input type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
                     </div>
                   </div>
                   <button type="button" class="btn btn-primary btn-block">注册</button>
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
               </div>
               </div>
             </div>
           </div>
       </div>
-<!--         <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title" id="reg">
-            注册
-          </h4>
-        </div>
-        <div class="modal-body">
-            <div class="form-horizontal">
-                <div class="form-group">
-                  <div class="col-lg-12">
-                    <input type="text" class="form-control"  placeholder="请输入电子邮箱地址">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-lg-12">
-                    <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-lg-12">
-                    <input type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
-                  </div>
-                </div>
-                <button type="button" class="btn btn-primary btn-block">注册</button>
-            </div>
-        </div> -->
-
       </div>
     </div>
   </div>
@@ -1041,22 +1017,109 @@
   <div class="modal fade" id="modal-login" role="dialog" aria-labelledby="login" aria-hidden="true">
     <div class="modal-dialog dialog-with">
       <div class="modal-content">
-        <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title" id="login">
-            登录
-          </h4>
-        </div>
-        <div class="modal-body">
-          内容...
-        </div>
-        <div class="modal-footer">
-           <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary">保存</button>
-        </div>
+        <div class="tabbable">
+          <ul class="nav nav-tabs modal-header modal-nav-tabs">
+            <li class="active">
+              <a href="#panel-email" data-toggle="tab">登录</a>
+            </li>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="panel-email">
+            <div class="modal-body">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="请输入电子邮箱/手机号">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block">登录</button>
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+                  <div class="form-group foot-a" style="margin-bottom:0px;">
+                    <div class="col-lg-12">
+                      <div class="col-lg-offset-8">
+                        <a id="modal-reg-button">注册</a> | <a id="modal-forget-button">忘记密码</a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
       </div>
     </div>
   </div>
       
+  <!-- 密码找回模态框 -->
+  <div class="modal fade" id="modal-forget" role="dialog" aria-labelledby="reg" aria-hidden="true">
+    <div class="modal-dialog dialog-with">
+      <div class="modal-content">
+        <div class="tabbable">
+          <ul class="nav nav-tabs modal-header modal-nav-tabs">
+            <li class="active">
+              <a href="#panel-email-find" data-toggle="tab">邮箱找回</a>
+            </li>
+            <li>
+              <a href="#panel-phone-find" data-toggle="tab">手机找回</a>
+            </li>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="panel-email-find">
+            <div class="modal-body">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="请输入电子邮箱地址">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block">找回密码</button>
+
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+              </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="panel-phone-find">
+            <div class="modal-body">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="请输入手机号">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-7">
+                      <input type="password" class="form-control" placeholder="手机验证码">
+                    </div>
+                    <div class="col-lg-5">
+                      <button type="button" class="btn btn-primary btn-block">获取验证码</button>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="6-16位密码，区分大小写，不能用空格">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block">修改密码</button>
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <div class="footer"> 
@@ -1094,15 +1157,28 @@
         });
 
         $('#login').click(function(){
-            $('#modal-login').modal('toggle');
+            $('#modal-login').modal('show');
             $("body").css('padding-right','0px');
         });
 
         $('#regsiter').click(function(){
-            $('#modal-reg').modal('toggle');
+            $('#modal-reg').modal('show');
             $("body").css('padding-right','0px');
         });
 
+        $('#modal-reg-button').click(function(){
+            $('#modal-login').modal('hide');
+            $('#modal-reg').modal('show');
+            $("body").css('padding-right','0px');
+        });
+
+
+        $('#modal-forget-button').click(function(){
+            $('#modal-login').modal('hide');
+            $('#modal-forget').modal('show');
+            $("body").css('padding-right','0px');
+        });
+        // <a id="modal-reg">注册</a> | <a id="modal-forget">忘记密码</a>
 
       // 模态框 垂直居中
       function centerModals(){
