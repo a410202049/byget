@@ -186,6 +186,7 @@
   -o-transition:all 0.3s ease;
   transition:all 0.3s ease;
   background-image:url(../img/icons/png/player.png);
+  background-repeat: no-repeat;
   background-size:98% 98%;
   width:50px;
   height:50px;
@@ -499,6 +500,31 @@ padding-left: 20px;
 .course-list{
   margin-bottom:10px;
 }
+
+
+/* select */
+.category-select{padding:5px 10px;border:#ddd 1px solid;border-radius:4px;font-size:12px}
+.category-select li{list-style:none;padding:10px 0 5px 60px}
+li.select-result{
+  margin-left: 23px;
+}
+.category-select .select-list{border-bottom:#eee 1px dashed}
+.category-select dl{zoom:1;position:relative;line-height:24px;margin-bottom: 10px;}
+.category-select dl:after{content:" ";display:block;clear:both;height:0;overflow:hidden}
+.category-select dt{width:100px;margin-bottom:5px;position:absolute;top:-2px;left:-100px;text-align:right;color:#666;height:24px;line-height:24px}
+.category-select dd{float:left;display:inline;margin:0 0 5px 5px;}
+.category-select a{display:inline-block;white-space:nowrap;height:24px;padding:0 10px;text-decoration:none;color:#039;border-radius:2px;}
+.category-select a:hover{color:#f60;background-color:#f3edc2}
+.category-select .selected a{color:#fff;background-color:#f60}
+.select-result dt{font-weight:bold}
+.select-no{color:#999}
+.category-select .select-result a{padding-right:20px;background:#f60 url("../img/close.gif") right 9px no-repeat;
+  -webkit-transition:all 0s ease;
+  -moz-transition:all 0s ease;
+  -o-transition:all 0s ease;
+  transition:all 0s ease;
+}
+.category-select .select-result a:hover{background-position:right -15px;}
 
 
 @media (max-width:320px) {
