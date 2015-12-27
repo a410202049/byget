@@ -502,6 +502,32 @@ padding-left: 20px;
   margin-bottom:10px;
 }
 
+.course-name{
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+.custom-breadcrumb-course{
+  margin-bottom: 10px;
+}
+
+.list-title{
+  background: #1abc9c;
+  border-radius: 6px 6px 0 0;
+  padding: 10px 25px 10px;
+  font-size: 19px;
+  font-weight: 700;
+  color:#2c3e50;
+}
+
+.list-title span{
+  display:inline-block;
+}
+.list-title .fui-list{
+  display:inline-block;
+  float: right;
+}
+
 
 /* select */
 .category-select{padding:5px 10px;border:#ddd 1px solid;border-radius:4px;font-size:12px}
@@ -527,6 +553,69 @@ li.select-result{
 }
 .category-select .select-result a:hover{background-position:right -15px;}
 
+.course-li{
+  list-style-type: none;
+  padding: 0 15px;
+  overflow: hidden;
+}
+.course-detail-list ul {
+  padding:0px;
+}
+.course-detail-list ul .course-li{
+  background: #34495e;
+  height: 50px;
+  border-bottom: 1px solid #2c3e50;
+  line-height: 50px;
+}
+
+.course-detail-list ul .course-li:hover{
+  background: #2c3e50;
+}
+
+.list-icon{
+  color: #fff;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.course-li a{
+  color: #fff;
+  cursor: pointer;
+}
+
+.course-detail-list ul .course-li.active{
+  background: #2c3e50;
+}
+.course-detail-list ul .course-li.active a{
+  color: #1abc9c;
+}
+
+.li-back{
+  background: #2c3e50;
+  height: 415px;
+}
+
+#course-player .vjs-duration{
+  right:70px;
+}
+
+#course-player .vjs-time-divider{
+  right: 110px;
+}
+
+
+.course-detail-list .jspDrag {
+    background: #1abc9c;
+    border-radius: 4px;
+}
+
+.course-detail-list .jspVerticalBar{
+  width: 8px;
+}
+
+.course-detail-list .jspTrack{
+  background: #34495e;
+}
 
 @media (max-width:320px) {
     .carousel-control {
@@ -542,6 +631,9 @@ li.select-result{
 
     .getCode{
       margin-top:10px;
+    }
+    .li-back{
+      height: 300px;
     }
 }
 
@@ -559,6 +651,10 @@ li.select-result{
 
     .getCode{
       margin-top:10px;
+    }
+
+    .li-back{
+      height: 300px;
     }
 }
 
@@ -578,6 +674,10 @@ li.select-result{
     .getCode{
       margin-top:10px;
     }
+
+    .li-back{
+      height: 300px;
+    }
 }
 
 
@@ -591,6 +691,10 @@ li.select-result{
 
     .getCode{
       margin-top:10px;
+    }
+
+    .li-back{
+      height: 300px;
     }
 }
 
