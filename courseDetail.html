@@ -46,7 +46,7 @@
       </div> 
      </div> 
      <!--登录状态下--> 
-     <ul class="nav navbar-nav navbar-right">
+<!--      <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <span class="default_small" href="#">
@@ -70,12 +70,12 @@
             </li>
           </ul>
         </li>
-      </ul>
+      </ul> -->
       
-<!--      <div class="navbar-right navbar-login-reg"> 
+     <div class="navbar-right navbar-login-reg"> 
       <a id="login">登录</a> | 
       <a id="regsiter">注册</a> 
-     </div> -->
+     </div>
 
     </div> 
    </div> 
@@ -102,13 +102,13 @@
   <h6 class="course-name">Property 动画入门到精通</h6>
 
         <div class="row">
-        <div class="col-md-6 col-lg-8">
+        <div class="col-md-8 col-lg-8">
         <!-- poster="img/poster.jpg" -->
           <video id="course-player"  controls="controls" class="video-js" data-setup="{}">
             <source src="http://ocsource.maiziedu.com/3dtfyx1.mp4" type="video/mp4">
           </video>
         </div> <!-- /video -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-4 col-lg-4">
           <div class="course-detail-list">
             <div class="list-title">
             <span>课程列表</span><div class="fui-list"></div>
@@ -119,7 +119,7 @@
                 <span class="list-icon fui-video"></span>
                 <a>1.互联网思维1223互联网思维1223</a>
               </li>
-              <li class="course-li active">
+              <li class="course-li">
                 <span class="list-icon fui-video"></span>
                 <a>1.互联网思维1223互联网思维1223</a>
               </li>
@@ -142,7 +142,40 @@
                 <span class="list-icon fui-lock"></span>
                 <a>1.互联网思维1223互联网思维1223</a>
               </li>
+
               <li class="course-li">
+                <span class="list-icon fui-lock"></span>
+                <a>1.互联网思维1223互联网思维1223</a>
+              </li>
+              <li class="course-li">
+                <span class="list-icon fui-lock"></span>
+                <a>1.互联网思维1223互联网思维1223</a>
+              </li>
+              <li class="course-li">
+                <span class="list-icon fui-lock"></span>
+                <a>1.互联网思维1223互联网思维1223</a>
+              </li>
+              <li class="course-li">
+                <span class="list-icon fui-lock"></span>
+                <a>1.互联网思维1223互联网思维1223</a>
+              </li>
+              <li class="course-li">
+                <span class="list-icon fui-lock"></span>
+                <a>1.互联网思维1223互联网思维1223</a>
+              </li>
+              <li class="course-li">
+                <span class="list-icon fui-lock"></span>
+                <a>1.互联网思维1223互联网思维1223</a>
+              </li>
+              <li class="course-li">
+                <span class="list-icon fui-lock"></span>
+                <a>1.互联网思维1223互联网思维1223</a>
+              </li>
+              <li class="course-li">
+                <span class="list-icon fui-lock"></span>
+                <a>1.互联网思维1223互联网思维1223</a>
+              </li>
+              <li class="course-li active">
                 <span class="list-icon fui-lock"></span>
                 <a>1.互联网思维1223互联网思维1223</a>
               </li>              
@@ -162,7 +195,52 @@
       </div>
 </div>
 
+<div class="container comment">
+  <div class="row clearfix">
+    <div class="col-md-8 column">
 
+        <div class="tabbable">
+          <ul class="nav nav-tabs modal-header modal-nav-tabs course-detail-tab">
+            <li class="course-tab active">
+              <a href="#comment-list" data-toggle="tab">评论列表</a>
+            </li>
+            <li class="course-tab">
+              <a href="#down-list" data-toggle="tab">课件下载</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="comment-list">
+                <div class="media">
+                 <a href="#" class="pull-left"><img alt="64x64" data-src="holder.js/64x64" class="media-object" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTFlNmIyOGU3MCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MWU2YjI4ZTcwIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true"></a>
+                <div class="media-body">
+                  <span class="media-heading">
+                    Nested media heading
+                  </span> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  <div class="media">
+                     <a href="#" class="pull-left"><img alt="64x64" data-src="holder.js/64x64" class="media-object" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTFlNmIyOGU3MCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MWU2YjI4ZTcwIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMi41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true"></a>
+                    <div class="media-body">
+                      <span class="media-heading">
+                        Nested media heading
+                      </span> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="down-list">
+                2222
+            </div>
+          </div>
+      </div>
+
+
+    </div>
+    <div class="col-md-4 column">
+      xxx
+    </div>
+
+  </div>
+</div>
 
 
 
@@ -385,6 +463,7 @@
   <script src="js/application.js"></script>
   <script src="js/jquery.cookie.js"></script>
   <script src="js/jquery.jscrollpane.min.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
   <script>
     $(document).ready(function() {
         $('.carousel').carousel({
@@ -435,7 +514,9 @@
       videojs.options.flash.swf = "img/video-js.swf"
       var player = videojs("course-player");
       var video_current_time = $.cookie('lesson_9413');
-      if (!video_current_time) video_current_time = 0;
+      if (!video_current_time){
+        video_current_time = 0;
+      }
       getPlayPostion();
       function getPlayPostion() {
         //将当前播放实际进度保存到cookie
@@ -454,65 +535,9 @@
 
   <script type="text/javascript">
     $(function(){
-$('.li-back').jScrollPane(
-  {autoReinitialise:true}
-  // showArrows - boolean (default false)//显示滑杆两边的箭头
-
-  // maintainPosition - boolean (default true)//保持原位置
-
-  // stickToBottom- boolean (default false)//滑到底部
-
-  // stickToRight- boolean (default false)//湖大道最右边
-
-  // autoReinitialise - boolean (default false)//自动加载出现滑杆
-
-  // autoReinitialiseDelay - int (default 500)//自动加载的时间延迟
-
-  // verticalDragMinHeight - int (default 0)//垂直拖拽的最小高度
-
-  // verticalDragMaxHeight - int (default 99999)//处置拖拽的最大高度
-
-  // horizontalDragMinWidth - int (default 0)//水平拖拽的长度
-
-  // horizontalDragMaxWidth - int (default 99999)//水平拖拽的最大长度
-
-  // contentWidth - int (default undefined)//内幕内用的宽度
-
-  // animateScroll - boolean (default false)//滚动动画
-
-  // animateDuration - int (default 300)//动画延迟
-
-  // animateEase - string (default 'linear')//动画轨迹
-
-  // hijackInternalLinks - boolean (default false)//截获内部链接
-
-  // verticalGutter - int (default 4)//处置不掉长度
-
-  // horizontalGutter - int (default 4)//水平不掉长度
-
-  // mouseWheelSpeed - int (default 10)//鼠标疼速度
-
-  // arrowButtonSpeed - int (default 10)//方向键按钮的速度
-
-  // arrowRepeatFreq - int (default 100)//按钮事件重复频率
-
-  // arrowScrollOnHover - boolean (default false)//接手鼠标在方向键上滑过的动作
-
-  // verticalArrowPositions - string [split|before|after|os] (default split)//垂直方向上按钮的位置
-
-  // horizontalArrowPositions - string [split|before|after|os] (default split)//水平方向上按钮的位置
-
-  // enableKeyboardNavigation - boolean (default true)//是否接受键盘操作
-
-  // hideFocus - boolean (default false)//隐藏焦点
-
-  // clickOnTrack - boolean (default true)//路径上点击操作
-
-  // trackClickSpeed - int (default 30)//互动轨迹上的点击速度
-
-  // trackClickRepeatFreq - int (default 100)//滑动轨迹上的重复频率
-
-);
+      var pane = $('.li-back').jScrollPane({autoReinitialise:true});
+      var api = pane.data('jsp');
+      api.scrollToElement('.course-detail-list .active', true);
     })
   </script>
 
