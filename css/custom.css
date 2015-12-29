@@ -636,6 +636,28 @@ li.select-result{
     margin-right: 0px;
 }
 
+
+#comment-list .pull-left img{
+  border-radius: 50%;
+}
+
+#comment-list{
+  font-size: 16px;
+}
+
+.nickname{
+  display:inline-block;
+  color:#999;
+  font-size: 14px;
+}
+
+.release{
+  display:inline-block;
+  color:#999;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 @media (max-width:320px) {
     .carousel-control {
     display:none;
@@ -660,6 +682,8 @@ li.select-result{
     padding-bottom: 20px;
   }
 }
+
+
 
 @media (min-width:320px) and (max-width:480px) {  
     .carousel-control {
