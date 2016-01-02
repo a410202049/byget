@@ -715,6 +715,114 @@ li.select-result{
   margin-top: 10px;
 }
 
+.sidebox {
+    /*background: #fff;*/
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.sidebox-title {
+    color: #4c5157;
+    font-size: 16px;
+    margin: 0;
+}
+.sidebox-header {
+    border-bottom: 1px solid #eee;
+    padding: 0 0 10px;
+}
+
+.sidebox-body {
+    padding: 10px 0;
+}
+
+.mooc-teacher .mooc-content a {
+    border-radius: 50%;
+    display: block;
+    float: left;
+    height: 64px;
+    margin-right: 20px;
+    overflow: hidden;
+    width: 64px;
+}
+
+.mooc-teacher .mooc-content img {
+    width: 100%;
+}
+
+
+.courses {
+    font-size: 14px;
+}
+
+.block-nav-banner {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.list-inline{
+  margin: 0px;
+}
+
+
+.block-nav-banner a {
+    display: block;
+    height: 64px;
+    line-height: 64px;
+    min-width: 5em;
+    text-align: center;
+    font-size: 14px;
+}
+.block-nav-banner a:hover {
+    color: #1abc9c;
+}
+.block-nav-banner .active a {
+    border-bottom: 2px solid #1abc9c;
+    color: #1abc9c;
+    height: 65px;
+    position: relative;
+}
+
+.article-list{
+    background: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+.hot-article-list{
+  padding: 0px;
+}
+
+.visiter{
+  margin-top: 5px;
+}
+
+.article-list-title{
+  color: #262627;
+}
+
+.hot-article-list li{
+  list-style: none;
+  font-size: 14px;
+
+}
+
+.hot-article-list li::before {
+    background-color: #ffad0f;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 4px;
+}
+
+.article-list-page{
+  margin: 0px;
+  margin-top: 10px;
+}
 @media (max-width:320px) {
     .carousel-control {
     display:none;
