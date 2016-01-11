@@ -292,32 +292,26 @@
 </div>
 
 <div class="container">
-<div class="pagination">
-        <ul>
-          <li class="p-prave">
-            <a href="#">上一页</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          <li>
-            <a href="#">4</a>
-          </li>
-          <li>
-            <a href="#">5</a>
-          </li>
-          <li class="p-next">
-            <a href="#">下一页</a>
-          </li>
-        </ul>
-      </div>
-
+  <div class="page">
+        <div class="page-box">
+            <a class="first" href="/course/teachers/?page=20"></a>
+            <a class="previous" href="/course/teachers/?page=20"></a>
+            <a href="/course/teachers/?page=1" class="current">1</a> 
+            <a href="/course/teachers/?page=2">2</a>
+            <a href="/course/teachers/?page=3">3</a>
+            <a href="/course/teachers/?page=4">4</a>
+            <a href="/course/teachers/?page=5">5</a>
+                        <a><span>...</span></a>
+            <a href="/course/teachers/?page=20">20</a>
+            <a href="/course/teachers/?page=2" class="next"></a>
+            <a class="last" href="/course/teachers/?page=20"></a>
+        </div>
+        <div class="jump-page">
+            共<span id="page-pane2">20</span>页，
+            第<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="page" class="zypageTxt">页 
+            <input type="button" class="zypageBtn" value="跳转">
+        </div>
+  </div>
 </div>
 
 

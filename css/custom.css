@@ -823,6 +823,73 @@ li.select-result{
   margin: 0px;
   margin-top: 10px;
 }
+
+
+.page-box {
+    display: inline-block;
+}
+.page-box a {
+    background: #f1eff0;
+    color: #666666;
+    cursor: pointer;
+    display: inline-block;
+    font-size: small;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+}
+.page-box a:hover, .page-box a.current {
+    background: #5ecfba;
+    color: #ffffff;
+}
+.page-box a.previous {
+    background: #f1eff0 url("../img/newp.png") no-repeat center;
+}
+.page-box a.next {
+    background: #f1eff0 url("../img/newn.png") no-repeat center;
+}
+.page-box a.first {
+    background: #f1eff0 url("../img/zy_prev.png") no-repeat center;
+}
+.page-box a.last {
+    background: #f1eff0 url("../img/zy_next.png") no-repeat center;
+}
+.page-box a.disabled {
+    pointer-events: none;
+}
+.jump-page{
+  display: inline-block;
+  font-size: 14px;
+  color: #5ecfba;
+}
+
+.zypageTxt {
+    border: 1px solid #b3c3c0;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10px;
+    text-align: center;
+    width: 30px;
+}
+
+.zypageBtn {
+    background: #5ecfbb none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 15px;
+    outline: 0 none;
+    text-align: center;
+    width: 40px;
+}
+
 @media (max-width:320px) {
     .carousel-control {
     display:none;

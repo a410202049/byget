@@ -236,32 +236,26 @@
 
 
 <div class="container">
-<div class="pagination article-list-page">
-        <ul>
-          <li class="p-prave">
-            <a href="#">上一页</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          <li>
-            <a href="#">4</a>
-          </li>
-          <li>
-            <a href="#">5</a>
-          </li>
-          <li class="p-next">
-            <a href="#">下一页</a>
-          </li>
-        </ul>
-      </div>
-
+  <div class="page">
+        <div class="page-box">
+            <a class="first" href="/course/teachers/?page=20"></a>
+            <a class="previous" href="/course/teachers/?page=20"></a>
+            <a href="/course/teachers/?page=1" class="current">1</a> 
+            <a href="/course/teachers/?page=2">2</a>
+            <a href="/course/teachers/?page=3">3</a>
+            <a href="/course/teachers/?page=4">4</a>
+            <a href="/course/teachers/?page=5">5</a>
+                        <a><span>...</span></a>
+            <a href="/course/teachers/?page=20">20</a>
+            <a href="/course/teachers/?page=2" class="next"></a>
+            <a class="last" href="/course/teachers/?page=20"></a>
+        </div>
+        <div class="jump-page">
+            共<span id="page-pane2">20</span>页，
+            第<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="page" class="zypageTxt">页 
+            <input type="button" class="zypageBtn" value="跳转">
+        </div>
+  </div>
 </div>
 
 
@@ -514,7 +508,6 @@
             $('#modal-forget').modal('show');
             $("body").css('padding-right','0px');
         });
-        // <a id="modal-reg">注册</a> | <a id="modal-forget">忘记密码</a>
 
       // 模态框 垂直居中
       function centerModals(){
@@ -529,42 +522,10 @@
       $('.modal').on('show.bs.modal', centerModals);
       $(window).on('resize', centerModals);
 
-
-
-          //视频页面js
-          videojs.options.flash.swf = "img/video-js.swf"
-          var player = videojs("course-player");
-          var video_current_time = $.cookie('lesson_9413');
-          if (!video_current_time){
-            video_current_time = 0;
-          }
-          getPlayPostion();
-          function getPlayPostion() {
-            //将当前播放实际进度保存到cookie
-            current_position = Math.ceil(player.currentTime());
-            if (current_position) {
-                $.cookie('lesson_9413', current_position, {expires: 7});
-                
-            }
-            setTimeout(getPlayPostion, 5000)
-          }
-          player.ready(function () {
-              player.currentTime(video_current_time);
-          })
       
       });
       
-
   </script> 
-
-  <script type="text/javascript">
-    $(function(){
-      var pane = $('.li-back').jScrollPane({autoReinitialise:true});
-      var api = pane.data('jsp');
-      api.scrollToElement('.course-detail-list .active', true);
-    })
-  </script>
-
 
  </body>
 </html>
