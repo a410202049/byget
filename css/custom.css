@@ -227,11 +227,11 @@
   border:1px solid #dddddd;
   border-left: none;
   border-top: none;
-  margin:0 5px 20px;
+  margin:0px 0px 20px;
 
 }
 .index-title{
-  padding:0 3px;
+  padding:0px;
 }
 .col-system{
   border:1px solid #dddddd;
@@ -412,15 +412,24 @@ padding-left: 20px;
   border-bottom: 1px solid #eaecef;
   padding-bottom: 15px;
   margin-bottom: 15px;
-  margin:0 5px 20px;
+  margin:0px 0px 20px;
 }
 
 .feeds-item.row div{
   padding:0px;
 }
 
+.tab-pane > div{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .feeds-item.row .item-right{
   padding-left: 15px;
+}
+
+.article-title{
+  margin-top: 0px;
 }
 
 .visiter{
@@ -527,6 +536,55 @@ padding-left: 20px;
   display:inline-block;
   float: right;
 }
+
+.article-about{
+  font-size: 14px;
+}
+
+.article-about .article-link{
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.u-datetime,.u-name{
+  color: #999;
+  margin-right: 10px;
+
+}
+
+.article-about .article-pic{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+
+
+.hot-tag {
+    background-color: #dee7e5;
+    border-radius: 2px;
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+.hot-tag:hover{
+    background-color: #c2d2cf;
+    color: #666;
+}
+
+.article-content{
+  /*color: #000;*/
+  font-size: 14px;
+}
+
+.sider-box-right{
+  background: #fff;
+}
+
 
 
 /* select */
@@ -756,8 +814,9 @@ li.select-result{
 }
 
 .block-nav-banner {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
 }
 
 .list-inline{
@@ -787,7 +846,14 @@ li.select-result{
     background: #fff;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding: 0 5px;
+    padding: 0px;
+}
+
+.article-content{
+    background: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0px;
 }
 
 .hot-article-list{
@@ -824,7 +890,9 @@ li.select-result{
   margin-top: 10px;
 }
 
-
+.page{
+  margin-bottom: 15px;
+}
 .page-box {
     display: inline-block;
 }
@@ -888,6 +956,10 @@ li.select-result{
     outline: 0 none;
     text-align: center;
     width: 40px;
+}
+
+.backcolor{
+  background: #f5f5f5;
 }
 
 @media (max-width:320px) {
