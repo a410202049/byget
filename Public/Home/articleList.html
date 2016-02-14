@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>测试站点</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <!-- Loading Bootstrap --> 
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet" /> 
+  <!-- <link href="http://www.bootcss.com/p/layoutit/css/bootstrap-combined.min.css"
+        rel="stylesheet">
+  --> 
+  <!-- Loading Flat UI --> 
+  <link href="css/flat-ui.min.css" rel="stylesheet" /> 
+  <link href="css/jquery.jscrollpane.css" rel="stylesheet" /> 
+  <link href="css/ui-pagination.css" rel="stylesheet" /> 
+  <link href="css/custom.css" rel="stylesheet" /> 
+  <link rel="shortcut icon" href="img/favicon.ico" /> 
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at
+        the end of file. --> 
+  <!--[if lt IE 9]>
+  <script src="js/vendor/html5shiv.js"></script>
+  <script src="js/vendor/respond.min.js"></script>
+  <![endif]--> 
+ </head> 
+ <body class="backcolor"> 
+  <!-- Static navbar --> 
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+   <div class="container"> 
+    <div class="navbar-header"> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> </button> 
+     <a class="navbar-logo" href="#"> <img src="img/logo.png" height="53" width="140" /> </a> 
+    </div> 
+    <div class="navbar-collapse collapse"> 
+     <ul class="nav navbar-nav"> 
+      <li class="active"> <a href="#">首页</a> </li> 
+      <li> <a href="#about">职业课程</a> </li> 
+      <li> <a href="#contact">站内资讯</a> </li> 
+      <li> <a href="#contact">技术小组</a> </li> 
+     </ul> 
+     <div class="navbar-form navbar-left"> 
+      <div class="form-group"> 
+       <div class="input-group"> 
+        <input type="search" placeholder="Search" id="navbarInput-01" class="form-control" /> 
+        <span class="input-group-btn"> <button class="btn" type="submit"> <span class="fui-search"></span> </button> </span> 
+       </div> 
+      </div> 
+     </div> 
+     <!--登录状态下--> 
+<!--      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="default_small" href="#">
+              <img src="img/user/default_small.png" height="30" width="30"></span>
+            kerry.gao <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">主页</a>
+            </li>
+            <li>
+              <a href="#">好友</a>
+            </li>
+            <li class="nav-msg">
+              <a href="#">消息</a>
+              <span class="navbar-new navbar-msg-new">1</span>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">退出</a>
+            </li>
+          </ul>
+        </li>
+      </ul> -->
+      
+     <div class="navbar-right navbar-login-reg"> 
+      <a id="login">登录</a> | 
+      <a id="regsiter">注册</a> 
+     </div>
+
+    </div> 
+   </div> 
+  </div> 
+
+
+
+<div class="block-nav-banner">
+  <div class="container">
+    <ul class="list-inline">
+      <li><a href="/group/tech/">技术文章</a></li>
+      <li class="active"><a href="/group/news/">麦子新闻</a></li>
+
+    </ul>     
+  </div>
+</div>
+
+
+<div class="container" style="background: #ffffff;">
+
+        <ul class="breadcrumb custom-breadcrumb article-list">
+          <li>
+            <a href="#">主页</a> <span class="divider"></span>
+          </li>
+          <li class="active">
+            课程列表
+          </li>
+        </ul>
+
+          <div class="feeds-item row no-padding">
+                <div class="feeds-item-pic item-left col-md-3">
+                  <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">
+                    <img src="http://www.bz55.com/uploads/allimg/150309/139-150309101A0.jpg"></a>
+                </div>
+                <div class="item-right col-md-9">
+                  <h3>
+                    <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">世界上第一辆由人工智能设计的汽车即将诞生</a>
+                  </h3>
+                  <p class="feeds-item-text">一家名为Primordial Research Project的公司正在与Autodesk和媒体公司Bandito Brothers合作开发一辆完全由人工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod</p>
+                  <div class="feeds-item-info">
+                    <p class="labels">
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10523" target="_blank">人工智能</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=73737" target="_blank">神经系统</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10946" target="_blank">汽车</a></span>
+
+                      <span class="visiter pull-right article-list-right">
+                        <a href="http://synchuman.baijia.baidu.com/" class="feeds-item-author" target="_blank">机器之心 Synced</a>
+                        <span class="tm">2015-12-22</span>
+                        <span class="count">阅读（2719）</span>
+                      </span>
+                    </p>
+                  </div>
+              </div>
+          </div>
+          <div class="feeds-item row no-padding">
+                <div class="feeds-item-pic item-left col-md-3">
+                  <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">
+                    <img src="http://www.bz55.com/uploads/allimg/150309/139-150309101A0.jpg"></a>
+                </div>
+                <div class="item-right col-md-9">
+                  <h3>
+                    <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">世界上第一辆由人工智能设计的汽车即将诞生</a>
+                  </h3>
+                  <p class="feeds-item-text">一家名为Primordial Research Project的公司正在与Autodesk和媒体公司Bandito Brothers合作开发一辆完全由人工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod</p>
+                  <div class="feeds-item-info">
+                    <p class="labels">
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10523" target="_blank">人工智能</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=73737" target="_blank">神经系统</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10946" target="_blank">汽车</a></span>
+
+                      <span class="visiter pull-right article-list-right">
+                        <a href="http://synchuman.baijia.baidu.com/" class="feeds-item-author" target="_blank">机器之心 Synced</a>
+                        <span class="tm">2015-12-22</span>
+                        <span class="count">阅读（2719）</span>
+                      </span>
+                    </p>
+                  </div>
+              </div>
+          </div>          <div class="feeds-item row no-padding">
+                <div class="feeds-item-pic item-left col-md-3">
+                  <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">
+                    <img src="http://www.bz55.com/uploads/allimg/150309/139-150309101A0.jpg"></a>
+                </div>
+                <div class="item-right col-md-9">
+                  <h3>
+                    <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">世界上第一辆由人工智能设计的汽车即将诞生</a>
+                  </h3>
+                  <p class="feeds-item-text">一家名为Primordial Research Project的公司正在与Autodesk和媒体公司Bandito Brothers合作开发一辆完全由人工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod</p>
+                  <div class="feeds-item-info">
+                    <p class="labels">
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10523" target="_blank">人工智能</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=73737" target="_blank">神经系统</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10946" target="_blank">汽车</a></span>
+
+                      <span class="visiter pull-right article-list-right">
+                        <a href="http://synchuman.baijia.baidu.com/" class="feeds-item-author" target="_blank">机器之心 Synced</a>
+                        <span class="tm">2015-12-22</span>
+                        <span class="count">阅读（2719）</span>
+                      </span>
+                    </p>
+                  </div>
+              </div>
+          </div>          <div class="feeds-item row no-padding">
+                <div class="feeds-item-pic item-left col-md-3">
+                  <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">
+                    <img src="http://www.bz55.com/uploads/allimg/150309/139-150309101A0.jpg"></a>
+                </div>
+                <div class="item-right col-md-9">
+                  <h3>
+                    <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">世界上第一辆由人工智能设计的汽车即将诞生</a>
+                  </h3>
+                  <p class="feeds-item-text">一家名为Primordial Research Project的公司正在与Autodesk和媒体公司Bandito Brothers合作开发一辆完全由人工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod</p>
+                  <div class="feeds-item-info">
+                    <p class="labels">
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10523" target="_blank">人工智能</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=73737" target="_blank">神经系统</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10946" target="_blank">汽车</a></span>
+
+                      <span class="visiter pull-right article-list-right">
+                        <a href="http://synchuman.baijia.baidu.com/" class="feeds-item-author" target="_blank">机器之心 Synced</a>
+                        <span class="tm">2015-12-22</span>
+                        <span class="count">阅读（2719）</span>
+                      </span>
+                    </p>
+                  </div>
+              </div>
+          </div>          <div class="feeds-item row no-padding">
+                <div class="feeds-item-pic item-left col-md-3">
+                  <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">
+                    <img src="http://www.bz55.com/uploads/allimg/150309/139-150309101A0.jpg"></a>
+                </div>
+                <div class="item-right col-md-9">
+                  <h3>
+                    <a href="http://synchuman.baijia.baidu.com/article/256639" target="_blank">世界上第一辆由人工智能设计的汽车即将诞生</a>
+                  </h3>
+                  <p class="feeds-item-text">一家名为Primordial Research Project的公司正在与Autodesk和媒体公司Bandito Brothers合作开发一辆完全由人工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod工智能建造的车。这辆车名为Hack Rod</p>
+                  <div class="feeds-item-info">
+                    <p class="labels">
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10523" target="_blank">人工智能</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=73737" target="_blank">神经系统</a></span>
+                      <span class="label"><a class="labelnm" href="http://baijia.baidu.com/?tn=listarticle&amp;labelid=10946" target="_blank">汽车</a></span>
+
+                      <span class="visiter pull-right article-list-right">
+                        <a href="http://synchuman.baijia.baidu.com/" class="feeds-item-author" target="_blank">机器之心 Synced</a>
+                        <span class="tm">2015-12-22</span>
+                        <span class="count">阅读（2719）</span>
+                      </span>
+                    </p>
+                  </div>
+              </div>
+          </div>
+
+
+     <div class="page">
+        <div class="page-box">
+            <a class="first" href="/course/teachers/?page=20"></a>
+            <a class="previous" href="/course/teachers/?page=20"></a>
+            <a href="/course/teachers/?page=1" class="current">1</a> 
+            <a href="/course/teachers/?page=2">2</a>
+            <a href="/course/teachers/?page=3">3</a>
+            <a href="/course/teachers/?page=4">4</a>
+            <a href="/course/teachers/?page=5">5</a>
+                        <a><span>...</span></a>
+            <a href="/course/teachers/?page=20">20</a>
+            <a href="/course/teachers/?page=2" class="next"></a>
+            <a class="last" href="/course/teachers/?page=20"></a>
+        </div>
+        <div class="jump-page">
+            共<span id="page-pane2">20</span>页，
+            第<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="page" class="zypageTxt">页 
+            <input type="button" class="zypageBtn" value="跳转">
+        </div>
+  </div>
+
+      </div>
+
+
+
+
+
+  <!-- 注册模态框 -->
+  <div class="modal fade" id="modal-reg" role="dialog" aria-labelledby="reg" aria-hidden="true">
+    <div class="modal-dialog dialog-with">
+      <div class="modal-content">
+        <div class="tabbable">
+          <ul class="nav nav-tabs modal-header modal-nav-tabs">
+            <li class="active">
+              <a href="#panel-email" data-toggle="tab">邮箱注册</a>
+            </li>
+            <li>
+              <a href="#panel-phone" data-toggle="tab">手机注册</a>
+            </li>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="panel-email">
+            <div class="modal-body">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="请输入电子邮箱地址">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block">注册</button>
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+              </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="panel-phone">
+            <div class="modal-body">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="请输入手机号">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-7">
+                      <input type="password" class="form-control" placeholder="手机验证码">
+                    </div>
+                    <div class="col-lg-5">
+                      <button type="button" class="btn btn-primary btn-block getCode">获取验证码</button>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="6-16位密码，区分大小写，不能用空格">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block">注册</button>
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 登录模态框 -->
+  <div class="modal fade" id="modal-login" role="dialog" aria-labelledby="login" aria-hidden="true">
+    <div class="modal-dialog dialog-with">
+      <div class="modal-content">
+        <div class="tabbable">
+          <ul class="nav nav-tabs modal-header modal-nav-tabs">
+            <li class="active">
+              <a href="#panel-email" data-toggle="tab">登录</a>
+            </li>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="panel-email">
+            <div class="modal-body">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="请输入电子邮箱/手机号">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block">登录</button>
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+                  <div class="form-group foot-a" style="margin-bottom:0px;">
+                    <div class="col-lg-12">
+                      <div class="col-lg-offset-8">
+                        <a id="modal-reg-button">注册</a> | <a id="modal-forget-button">忘记密码</a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+      
+  <!-- 密码找回模态框 -->
+  <div class="modal fade" id="modal-forget" role="dialog" aria-labelledby="reg" aria-hidden="true">
+    <div class="modal-dialog dialog-with">
+      <div class="modal-content">
+        <div class="tabbable">
+          <ul class="nav nav-tabs modal-header modal-nav-tabs">
+            <li class="active">
+              <a href="#panel-email-find" data-toggle="tab">邮箱找回</a>
+            </li>
+            <li>
+              <a href="#panel-phone-find" data-toggle="tab">手机找回</a>
+            </li>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="panel-email-find">
+            <div class="modal-body">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="请输入电子邮箱地址">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block">找回密码</button>
+
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+              </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="panel-phone-find">
+            <div class="modal-body">
+              <div class="form-horizontal">
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="请输入手机号">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-7">
+                      <input type="password" class="form-control" placeholder="手机验证码">
+                    </div>
+                    <div class="col-lg-5">
+                      <button type="button" class="btn btn-primary btn-block">获取验证码</button>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <input type="text" class="form-control"  placeholder="6-16位密码，区分大小写，不能用空格">
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block">修改密码</button>
+                  <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
+                  <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="footer"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-6"> 
+      <div class="footer_link"> 
+       <ul> 
+        <li><a target="_blank" href="#">人才招聘</a></li> 
+        <li> <a target="_blank" href="#">联系我们</a></li> 
+        <li><a target="_blank" href="#">关于我们</a></li> 
+        <li> <a target="_blank" href="#">意见反馈</a></li> 
+        <li> <a target="_blank" href="#">友情链接</a></li> 
+       </ul> 
+       <p style="clear:both">Copyright &copy; 2015 ByGet.com All Rights Reserved | 京ICP备 13046642号-2</p> 
+      </div> 
+     </div> 
+     <div class="col-md-6"> 
+      <!--  --> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- jQuery (necessary for Flat UI's JavaScript plugins) --> 
+  <script src="js/vendor/jquery.min.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files
+        as needed --> 
+  <script src="js/vendor/video.js"></script> 
+  <script src="js/flat-ui.min.js"></script> 
+  <script src="js/application.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/tc-pagination.js"></script>
+  <script src="js/jquery.jscrollpane.min.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.carousel').carousel({
+         interval: 3000
+        });
+
+        $('#login').click(function(){
+            $('#modal-login').modal('show');
+            $("body").css('padding-right','0px');
+        });
+
+        $('#regsiter').click(function(){
+            $('#modal-reg').modal('show');
+            $("body").css('padding-right','0px');
+        });
+
+        $('#modal-reg-button').click(function(){
+            $('#modal-login').modal('hide');
+            $('#modal-reg').modal('show');
+            $("body").css('padding-right','0px');
+        });
+
+
+        $('#modal-forget-button').click(function(){
+            $('#modal-login').modal('hide');
+            $('#modal-forget').modal('show');
+            $("body").css('padding-right','0px');
+        });
+
+      // 模态框 垂直居中
+      function centerModals(){
+          $('.modal').each(function(i){
+              var $clone = $(this).clone().css('display', 'block').appendTo('body');    
+              var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
+              top = top > 0 ? top : 0;
+              $clone.remove();
+              $(this).find('.modal-content').css("margin-top", top);
+          });
+      }
+      $('.modal').on('show.bs.modal', centerModals);
+      $(window).on('resize', centerModals);
+
+      
+      });
+      
+  </script> 
+
+ </body>
+</html>
