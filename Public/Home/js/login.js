@@ -1,11 +1,5 @@
 $(function () {
 
-	//点击刷新验证码
-	var verifyUrl = $('#verify-img').attr('src');
-	$('#verify-img').click(function () {
-		$(this).attr('src', verifyUrl + '/' + Math.random());
-	});
-
 	//jQuery Validate 表单验证
 	
 	/**
