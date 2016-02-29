@@ -16,6 +16,10 @@
   <![endif]--> 
 
   <block name="header"></block>
+  <script type='text/javascript'>
+      var PUBLIC = '__PUBLIC__';
+      var CONTROLLER_NAME = '{$Think.const.CONTROLLER_NAME}';
+  </script>
  </head> 
  <body> 
   <!-- Static navbar --> 
@@ -293,8 +297,9 @@
   <script src="__PUBLIC__/Home/js/vendor/jquery.min.js"></script> 
   <script src="__PUBLIC__/Home/js/flat-ui.min.js"></script> 
   <script src="__PUBLIC__/Home/js/application.js"></script>
-  <script src="__PUBLIC__/Home/js/application.js"></script>
-  
+  <script src="__PUBLIC__/Home/js/jquery-validate.js"></script>
+  <script src="__PUBLIC__/Home/js/login.js"></script>
+
   <script>
     $(document).ready(function() {
         $('.carousel').carousel({
