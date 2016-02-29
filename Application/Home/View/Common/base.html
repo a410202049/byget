@@ -92,25 +92,34 @@
         <div class="tabbable">
           <ul class="nav nav-tabs modal-header modal-nav-tabs">
             <li class="active">
-              <a href="#panel-email" data-toggle="tab">邮箱注册</a>
+              <a href="#panel-phone" data-toggle="tab">手机注册</a>
             </li>
             <li>
-              <a href="#panel-phone" data-toggle="tab">手机注册</a>
+              <a href="#panel-email" data-toggle="tab">邮箱注册</a>
             </li>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="panel-email">
+
+            <div class="tab-pane active" id="panel-phone">
             <div class="modal-body">
               <div class="form-horizontal">
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="请输入电子邮箱地址">
+                      <input type="text" name="mobile" class="form-control"  placeholder="请输入手机号">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-7">
+                      <input type="password" name="code" class="form-control" placeholder="手机验证码">
+                    </div>
+                    <div class="col-lg-5">
+                      <button type="button" class="btn btn-primary btn-block getCode">获取验证码</button>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
+                      <input type="text" name="password" class="form-control"  placeholder="6-16位密码，区分大小写，不能用空格">
                     </div>
                   </div>
                   <div class="form-group">
@@ -124,25 +133,17 @@
               </div>
               </div>
             </div>
-            <div class="tab-pane" id="panel-phone">
-            <div class="modal-body">
+            <div class="tab-pane" id="panel-email">
+              <div class="modal-body">
               <div class="form-horizontal">
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="请输入手机号">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-lg-7">
-                      <input type="password" class="form-control" placeholder="手机验证码">
-                    </div>
-                    <div class="col-lg-5">
-                      <button type="button" class="btn btn-primary btn-block getCode">获取验证码</button>
+                      <input type="text" class="form-control"  placeholder="请输入电子邮箱地址">
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="6-16位密码，区分大小写，不能用空格">
+                      <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
                     </div>
                   </div>
                   <div class="form-group">
