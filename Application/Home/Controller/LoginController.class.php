@@ -33,11 +33,11 @@ class LoginController extends BaseController {
     /**
      * [forget 手机忘记密码]
      */
-    public function mobile_forget(){
+    public function mobileForget(){
         $mobile = I('username','');
         $password = md5(I('password',''));
         $code = I('code','');
-        $table = M('mobileVerifyRecord');
+        $table = M('mobile_verify_record');
         $where = array('mobile' =>$mobile,'is_user'=>0);
         $result = $table->where($where)->order('created desc')->find();
         if($result['code']!=$code){
@@ -70,7 +70,7 @@ class LoginController extends BaseController {
         $arr = I();
         $oldPassword = md5(I('oldPassword',''));
         $password = md5(I('password',''));
-        if($status = is_login()){   
+        if($status = is_login()){
             $where = array('id' =>$status);
             $user = M('user');
             $result = $user->where($where)->find();
@@ -88,9 +88,8 @@ class LoginController extends BaseController {
     /**
      * [mobile_register 手机用户注册]
      */
-    public function mobile_register() {
-        $username = I('username','');
-        $mobile = I('mobile','');
+    public function mobileRegister() {
+        $mobile = I('username','');
         $code = I('code','');
         $password = md5(I('password',''));
         $nickname = I('nickname','');
@@ -109,7 +108,7 @@ class LoginController extends BaseController {
         if(empty($password)){
             $this->resultMsg('error','密码不能为空');
         }
-        $table = M('mobileVerifyRecord');
+        $table = M('mobile_verify_record');
         $where = array('mobile' =>$mobile,'is_user'=>0);
         $result = $table->where($where)->order('created desc')->find();
         if($result['code']!=$code){
@@ -122,7 +121,7 @@ class LoginController extends BaseController {
             $this->resultMsg('error','验证码超时，请重新发送！');
         }
         $data = array(
-            'username' => $username,
+            'username' => $mobile,
             'password' => $password,
             'mobile' => $mobile,
             'nickname' =>$nickname,
@@ -144,7 +143,7 @@ class LoginController extends BaseController {
     /**
      * [email_register 手机用户注册]
      */
-    public function email_register() {
+    public function emailRegister() {
         $email = I('username','');
         $password = md5(I('password',''));
         $nickname = I('nickname','');
@@ -163,36 +162,70 @@ class LoginController extends BaseController {
         if(empty($password)){
             $this->resultMsg('error','密码不能为空');
         }
-        $data = array(
+        $uData = array(
             'username' => $email,
             'password' => $password,
             'email' => $email,
             'nickname' =>$nickname,
             'registime' => date('Y-m-d H:i:s',time()),
         );
-        $uid = $user->data($data)->add();
+        $uid = $user->data($uData)->add();
         if($uid){
             session('uid', $uid);
-            $table->where($where)->data(array('is_user'=>1))->save();
-            //此处发送邮箱
-            //code
-            $this->resultMsg('success','注册成功！');
+            $table = M('email_verify_record');
+            $ip = get_client_ip();
+            $createTime = date('Y-m-d H:i:s',time());
+            //token生成
+            $code = sha1($_SERVER['HTTP_USER_AGENT'].$_SERVER['REMOTE_ADDR'].time().rand());
+            $data = array('code'=>$code,'email'=>$email,'ip'=>$ip,'created'=>$createTime);
+            $status = $table->add($data);
+            sendMail($email, '用户激活邮件','点击或复制该地址：http://www.withcode.com/index.php/Login/emailActivate/token/'.$code.'/email/'.$email);
+            $this->resultMsg('success','注册成功！，稍后您将会收到一条激活邮件。');
         }else{
             $this->resultMsg('error','注册失败！');
         }
     }
 
+    //邮件激活
+    public function emailActivate(){
+        $token = I('token');
+        $email = I('email');
+        $table = M('email_verify_record');
+        $user = M('user');
+        $re = $user->where(array('email'=>$email,'valid_email'=>1))->find();
+        if($re){
+            $this->resultMsg('error','用户已经被激活，不需要再次激活');
+        }
+        $where = array('code' =>$token,'email'=>$email,'is_user'=>0);
+        $result = $table->where($where)->order('created desc')->find();
+        if($result['code']!=$token){
+            $this->resultMsg('error','token失效，请重新发送邮件');
+        }
+        $nowTime = date('Y-m-d H:i:s',time());
+        $timeOut = date('Y-m-d H:i:s',strtotime($result['created']."+30 minute"));
+        //判断验证码是否超时
+        if(strtotime($timeOut)<strtotime($nowTime)){
+            $this->resultMsg('error','激活链接超时，请重新发送邮件！');
+        }
+        $user->where(array('email'=>$email))->data(array('valid_email'=>1))->save();
+        $table->where($where)->data(array('is_user'=>1))->save();
+        $this->resultMsg('success','用户激活成功');
+        // echo $token;
+
+
+    }
 
     /**
      * [sendCode 发送验证码]
      * @param  [type]  $mobile [description]
      * @param  integer $type   [0为注册，1为找回密码]
      */
-    public function sendCode($mobile){
+    public function sendCode(){
+        $mobile = I('mobile','');
         if(!preg_match("/1[3458]{1}\d{9}$/",$mobile)){
             $this->resultMsg('error','请输入正确的手机号码！');
         }
-        $table = M('mobileVerifyRecord');
+        $table = M('mobile_verify_record');
         $code=sprintf("%06d",rand(1,999999));
         $ip = get_client_ip();
         $createTime = date('Y-m-d H:i:s',time());
@@ -243,7 +276,7 @@ class LoginController extends BaseController {
      */
     public function checkNikeName(){
         if(session('uid')){      
-            if(empty(I('nickname',''))){
+            if(!I('nickname','')){
                 $this->resultMsg('error','昵称不能为空');
             }else{
                 $info = M("user");
