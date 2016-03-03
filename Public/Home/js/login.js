@@ -141,6 +141,37 @@ $(function () {
 	});
 
 
+	var _reg_log_code = true;
+
+	$('#mobile-reg .getCode').click(function(event) {
+		var _time = 10;
+		if(_reg_log_code){
+		   $('#mobile-reg .getCode').html("发送中..");
+		   $.ajax({
+				type: "POST",
+				url: sendCode,
+				dataType: "json",
+				data:{mobile:$("#mobile-reg input[name='username']").val()},
+				success: function(data) {
+					if(data.status == 'error'){
+						$('#mobile-reg .getCode').html("发送验证码");
+	   					return false;
+					}else{
+		                _reg_log_code = false;
+		                var _t_code = setInterval(function() {
+		                    $('#mobile-reg .getCode').html(_time-- + "秒");
+		                    if (_time < 1) {
+		                        clearInterval(_t_code);
+		                        $('#mobile-reg .getCode').html("发送验证码");
+		                        _reg_log_code = true;
+		                    };
+		                }, 1000);
+					}
+				}
+			});
+	    }
+	});
+
 
 
 });
