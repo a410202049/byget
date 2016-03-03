@@ -100,6 +100,13 @@ class LoginController extends BaseController {
         if(!preg_match('/^[_a-zA-Z0-9\x{4e00}-\x{9fa5}]{2,18}$/u',$nickname)){
             $this->resultMsg('error','请输入2-18中文，数字，下划线');
         }
+
+        $condition['nickname'] = $nickname;
+        $nickData = $user->where($condition)->find();
+        if($nickData){
+            $this->resultMsg('error','昵称已经存在');
+        }
+
         $mobileWhere = array('username'=>$mobile);
         $re = $user->where($mobileWhere)->find();
         if($re){
@@ -154,6 +161,13 @@ class LoginController extends BaseController {
         if(!preg_match('/^[_a-zA-Z0-9\x{4e00}-\x{9fa5}]{2,18}$/u',$nickname)){
             $this->resultMsg('error','请输入2-18中文，数字，下划线');
         }
+        
+        $condition['nickname'] = $nickname;
+        $nickData = $user->where($condition)->find();
+        if($nickData){
+            $this->resultMsg('error','昵称已经存在');
+        }
+
         $emailWhere = array('username'=>$email);
         $re = $user->where($emailWhere)->find();
         if($re){
@@ -270,29 +284,7 @@ class LoginController extends BaseController {
         }
     }
 
-    /**
-     * [checkNikeName 检查昵称是否存在]
-     * @return [type] [description]
-     */
-    public function checkNikeName(){
-        if(session('uid')){      
-            if(!I('nickname','')){
-                $this->resultMsg('error','昵称不能为空');
-            }else{
-                $info = M("user");
-                $condition['id']  = array('neq',session('uid'));
-                $condition['nickname'] = $arr['nickname'];
-                $data = $info->where($condition)->find();
-                if($data){
-                    $this->resultMsg('error','昵称已经存在');
-                }else{
-                    $this->resultMsg('success','可以使用该昵称');
-                }
-            }
-        }else{
-            $this->resultMsg('error','尚未登录');
-        }
-    }
+
 
     /**
      * [logout 退出登录]

@@ -104,9 +104,10 @@
             <div class="tab-pane active" id="panel-phone">
             <div class="modal-body">
               <div class="form-horizontal">
+                <form name="mobile-reg">
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" name="mobile" class="form-control"  placeholder="请输入手机号">
+                      <input type="text" name="username" class="form-control"  placeholder="请输入手机号">
                     </div>
                   </div>
                   <div class="form-group">
@@ -124,36 +125,39 @@
                   </div>
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
+                      <input name="nickname" type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
                     </div>
                   </div>
                   <button type="button" class="btn btn-primary btn-block">注册</button>
                   <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
                   <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+                </form>
               </div>
               </div>
             </div>
             <div class="tab-pane" id="panel-email">
               <div class="modal-body">
               <div class="form-horizontal">
+                <form name="email-reg">
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="请输入电子邮箱地址">
+                      <input type="text" name="username" class="form-control"  placeholder="请输入电子邮箱地址">
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
+                      <input name="password" type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
+                      <input name="nickname" type="text" class="form-control"  placeholder="昵称为2-18位，中英文、数字及下划线">
                     </div>
                   </div>
                   <button type="button" class="btn btn-primary btn-block">注册</button>
                   <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
                   <div class="alert alert-success custom-alert" role="alert">成功提示</div>
+                </form>
               </div>
               </div>
             </div>
@@ -179,17 +183,18 @@
             <div class="tab-pane active" id="panel-email">
             <div class="modal-body">
               <div class="form-horizontal">
+                <form name="login">
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="text" class="form-control"  placeholder="请输入电子邮箱/手机号">
+                      <input name="username" type="text" class="form-control"  placeholder="请输入电子邮箱/手机号">
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-12">
-                      <input type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
+                      <input name="password" type="password" class="form-control" placeholder="6-16位密码，区分大小写，不能用空格">
                     </div>
                   </div>
-                  <button type="button" class="btn btn-primary btn-block">登录</button>
+                  <button type="submit" class="btn btn-primary btn-block">登录</button>
                   <div class="alert alert-danger custom-alert" role="alert">错误提示</div>
                   <div class="alert alert-success custom-alert" role="alert">成功提示</div>
                   <div class="form-group foot-a" style="margin-bottom:0px;">
@@ -199,6 +204,7 @@
                       </div>
                     </div>
                   </div>
+                </form>
               </div>
               </div>
             </div>
