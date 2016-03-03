@@ -19,6 +19,7 @@
   <script type='text/javascript'>
       var PUBLIC = '__PUBLIC__';
       var CONTROLLER_NAME = '{$Think.const.CONTROLLER_NAME}';
+      var loginUrl = "{:U('Login/login')}";
   </script>
  </head> 
  <body> 
@@ -183,7 +184,7 @@
             <div class="tab-pane active" id="panel-email">
             <div class="modal-body">
               <div class="form-horizontal">
-                <form name="login">
+                <form name="login" id="login-form">
                   <div class="form-group">
                     <div class="col-lg-12">
                       <input name="username" type="text" class="form-control"  placeholder="请输入电子邮箱/手机号">

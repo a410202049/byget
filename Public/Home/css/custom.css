@@ -1047,6 +1047,9 @@ li.select-result{
   padding: 15px;
 }
 
+.custom-alert{
+  text-align: center;
+}
 label.error{
   color: red;
 }
