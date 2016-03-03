@@ -271,16 +271,15 @@ class LoginController extends BaseController {
     /**
      * 判断用户是否存在
      */
-    public function checkUser(){
+    public function checkAccount(){
         $username = I('username','');
         $user = M("user");
         $where = array('username'=>$username);
         $result = $user->where($where)->find();
-        if($username ==""){
-            $this->resultMsg('error','用户名不能为空');
-        }
         if($result){
-            $this->resultMsg('error','用户名已存在');
+            echo 'false';
+        }else{
+            echo 'true';
         }
     }
 

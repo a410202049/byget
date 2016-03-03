@@ -15,6 +15,13 @@ $(function () {
 	    return this.optional(element) || (tel.test(value));
 	}, "以字母开头，6-16 字母、数字、下划线'_'");
 
+
+	jQuery.validator.addMethod("isMobile", function(value, element) {
+		var length = value.length;
+		var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+		return this.optional(element) || (length == 11 && mobile.test(value));
+	}, "请正确填写您的手机号码");
+
 	$('form[name=login]').validate({
 		submitHandler: function(form) { 
 		   $.ajax({
@@ -63,45 +70,75 @@ $(function () {
 
 
 
-	// $('form[name=login]').validate({
-	// 	// errorElement : 'span',
-	// 	submitHandler: function(form) { 
-	// 		// var param = form.serialize(); 
-	// 		console.log(form);
+	$('form[name=mobile-reg]').validate({
+		// errorElement : 'span',
+		submitHandler: function(form) { 
+		   $.ajax({
+				type: "POST",
+				url: mobileRegisterUrl,
+				dataType: "json",
+				data:$('#mobile-reg').serialize(),
+				beforeSend: function(){
+					$('#mobile-reg .btn-reg').html('注册中...');
+    			},
+    			complete: function(){
+    				$('#mobile-reg .btn-reg').html('注册');
+    			},
+				success: function(data) {
+					if(data.status == 'error'){
+						$('#mobile-reg .alert-danger').html(data.message).show(500).delay(2000).hide(500);
+					}else{
+						window.location.reload()
+					}
+				}
+			});
 			
-	// 	},
-	// 	rules : {
-	// 		username : {
-	// 			required : true,
-	// 			user : true
-	// 			// remote : {
-	// 			// 	url : checkAccount,
-	// 			// 	type : 'post',
-	// 			// 	dataType : 'json',
-	// 			// 	data : {
-	// 			// 		account : function () {
-	// 			// 			return $('#account').val();
-	// 			// 		}
-	// 			// 	}
-	// 			// }
-	// 		},
-	// 		password : {
-	// 			required : true,
-	// 			pass : true
-	// 		}
+		},
+		rules : {
+			username : {
+				required : true,
+				isMobile : true,
+				remote : {
+					url : checkAccount,
+					type : 'post',
+					dataType : 'json',
+					data : {
+						username : function () {
+							return $("#mobile-reg input[name='username']").val();
+						}
+					}
+				}
+			},
+			password : {
+				required : true,
+				pass : true
+			},
+			nickname:{
+				required : true
+			},
+			code:{
+				required : true
+			}
 
-	// 	},
-	// 	messages : {
-	// 		username : {
-	// 			required : '账号不能为空',
-	// 			remote : '账号已存在'
-	// 		},
-	// 		password : {
-	// 			required : '密码不能为空'
-	// 		}
+		},
+		messages : {
+			username : {
+				required : '账号不能为空',
+				isMobile: '请填写正确的手机号码',
+				remote : '账号已存在'
+			},
+			password : {
+				required : '密码不能为空'
+			},
+			nickname : {
+				required : '昵称不能为空'
+			},
+			code:{
+				required : '验证码不能为空'
+			}
 
-	// 	}
-	// });
+		}
+	});
 
 
 
