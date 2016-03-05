@@ -193,7 +193,7 @@ class LoginController extends BaseController {
             $code = sha1($_SERVER['HTTP_USER_AGENT'].$_SERVER['REMOTE_ADDR'].time().rand());
             $data = array('code'=>$code,'email'=>$email,'ip'=>$ip,'created'=>$createTime);
             $status = $table->add($data);
-            sendMail($email, '用户激活邮件','点击或复制该地址：http://www.withcode.com/index.php/Login/emailActivate/token/'.$code.'/email/'.$email);
+            sendMail('1509699669@qq.com', '用户激活邮件','点击或复制该地址：http://www.withcode.com/index.php/Login/emailActivate/token/'.$code.'/email/'.$email);
             $this->resultMsg('success','注册成功！，稍后您将会收到一条激活邮件。');
         }else{
             $this->resultMsg('error','注册失败！');
@@ -283,6 +283,21 @@ class LoginController extends BaseController {
         }
     }
 
+
+    /**
+     * 判断昵称是否存在
+     */
+    public function checkNickname(){
+        $nickname = I('nickname','');
+        $user = M("user");
+        $where = array('nickname'=>$nickname);
+        $result = $user->where($where)->find();
+        if($result){
+            echo 'false';
+        }else{
+            echo 'true';
+        }
+    }
 
 
     /**
